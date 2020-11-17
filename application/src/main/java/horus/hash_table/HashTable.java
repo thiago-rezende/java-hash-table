@@ -20,7 +20,7 @@ public class HashTable<_KeyType, _DataType> {
     }
 
     public void Insert(_KeyType key, _DataType value) {
-        Integer position = key.hashCode() % frames;
+        Integer position = Math.abs(key.hashCode()) % frames;
 
         if (data[position] == null)
             data[position] = new HashTableNode<_KeyType, _DataType>(key, value);
@@ -38,7 +38,7 @@ public class HashTable<_KeyType, _DataType> {
     }
 
     public _DataType Get(_KeyType key) {
-        Integer position = key.hashCode() % frames;
+        Integer position = Math.abs(key.hashCode()) % frames;
 
         if (data[position] == null)
             return null;
@@ -62,7 +62,7 @@ public class HashTable<_KeyType, _DataType> {
     }
 
     public _DataType Remove(_KeyType key) {
-        Integer position = key.hashCode() % frames;
+        Integer position = Math.abs(key.hashCode()) % frames;
 
         if (data[position] == null)
             return null;
@@ -101,7 +101,7 @@ public class HashTable<_KeyType, _DataType> {
 
     private HashTableNode<_KeyType, _DataType>[] InsertToResize(HashTableNode<_KeyType, _DataType>[] arr,
             Integer arr_size, _KeyType key, _DataType value) {
-        Integer position = key.hashCode() % arr_size;
+        Integer position = Math.abs(key.hashCode()) % arr_size;
 
         if (arr[position] == null)
             arr[position] = new HashTableNode<_KeyType, _DataType>(key, value);
