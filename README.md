@@ -23,6 +23,12 @@
 ```
    .
    ├── .github                  # Repository stuff.
+   ├───application              # Application sources
+   │   └───src
+   │       ├───main             # Sources
+   │       └───test             # Unit tests
+   ├───gradle                   # Build system stuff
+   ├───gradlew                  # Build system wrapper
    └── README.md                # Readme File.
 ```
 
