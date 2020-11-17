@@ -69,4 +69,9 @@ gradle-app.setting
 ### Gradle Patch ###
 **/build/
 
+## VSCode Java ##
+.settings
+.classpath
+.project
+
 # End of https://www.toptal.com/developers/gitignore/api/java,gradle,vscode,git
